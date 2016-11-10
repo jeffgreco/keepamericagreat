@@ -2,8 +2,22 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">  
 <style>
-  body { text-align: center; }
-  header { text-transform: uppercase; color: white; background:rgb(192, 61, 70); font-family: "Old Standard TT", serif; padding: 40px; }
+  body { text-align: center; padding:0; }
+  @-webkit-keyframes pulse {
+      0% {background-color: #ce1010;}
+     25% {background-color: #3a5d38;}
+     50% {background-color: #9e1ee0;}
+     75% {background-color: #ef862c;}
+     100% {background-color: #7f70ff;}
+}
+ 
+header {
+     background-color: #45CEEF;    
+     -webkit-animation: pulse 40s infinite alternate;
+ 
+}
+
+  header { text-transform: uppercase; color: white; font-family: "Old Standard TT", serif; padding: 40px; }
   </style>
   </head>
 <body>
