@@ -127,8 +127,7 @@ span {
   <script>
             var trackOutboundLink = function(url) {
    ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function(){document.location = url;}
+     'transport': 'beacon'
    });
 }
 
@@ -140,8 +139,6 @@ span {
     }
     $('a').on('click', function(e) {
           trackOutboundLink($(this).attr('href'));
-               e.preventDefault();
-              return false;
      });
 });
   </script>
