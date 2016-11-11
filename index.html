@@ -125,12 +125,22 @@ span {
 
 </script>
   <script>
+            var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function(){document.location = url;}
+   });
+}
+
     $(function () {
     var parent = $("#links");
     var divs = parent.children();
     while (divs.length) {
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
     }
+     divs.on('click', function() {
+          trackOutboundLink($(this).attr('href'));
+     });
 });
   </script>
 </body>
