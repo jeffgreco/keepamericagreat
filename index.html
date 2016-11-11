@@ -47,29 +47,36 @@ header {
   #content { max-width: 600px; margin: 0 auto; }
   
   p { font-family: "Shrikhand", serif; }
-  a {
-        display: inline-block;
+a {
+    display: inline-block;
     font-family: "Shrikhand", serif;
     text-align: center;
     font-size: 40px;
-    padding: 60px 20px;
+    padding: 20px 20px;
     flex-shrink: 0;
     white-space: normal;
     max-width: 50%;
     flex-grow: 1;
     text-decoration: none;
-  }
+    min-height: 8em;
+    position: relative;
+    justify-content: center;
+    min-width: 30%;
+}
   #links {
-        display: flex;
+    display: flex;
     align-items: center;
     flex-wrap: wrap;
   }
-  span {
-    display: absolute;
+span {
+    position: absolute;
     top: 50%;
     transition: .2s all ease-out;
     transform: translateY(-50%);
-  }
+    justify-content: center;
+    left: 0;
+    width: 100%;
+}
   a:hover span {
     top: 40%;
   }
