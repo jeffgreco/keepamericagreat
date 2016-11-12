@@ -21,55 +21,63 @@
 <meta name="twitter:image:src" content="http://alreadygreat.co/thumbnail2.png">
 <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|PT+Sans|Shrikhand" rel="stylesheet">
 <style>
-  body { text-align: left; margin:0;     font-family: "Shrikhand", serif; }
+  body { text-align: left; margin:0; font-family: "Shrikhand", serif; }
   section { padding: 5% 10%; }
-header {
-     background-color: #45CEEF;    
-     -webkit-animation: pulse 40s infinite alternate;
-}
   p { font-size: 60px; }
   .first p { font-size: 72px; }
   #content { max-width: 600px; margin: 0 auto; }
+
+
+section a { text-decoration: underline; color: #fff; }
+
+  #links {
+    display: flex;
+    flex-wrap: wrap;
+text-align: center;
+width: 100%;
+  }
+
   #links a {
     display: block;
     text-align: center;
     font-size: 40px;
-    flex-shrink: 0;
-    white-space: normal;
-    max-width: 50%;
-    flex-grow: 1;
     text-decoration: none;
-    min-height: 8em;
+    height: 8em;
+flex-grow:1;
+min-width: 280px;
     position: relative;
-    justify-content: center;
-    min-width: 30%;
 }
-section a { text-decoration: underline; color: #fff; }
-  #links {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+
 span {
     position: absolute;
     top: 50%;
     transition: .2s all ease-out;
     transform: translateY(-50%);
-    justify-content: center;
     left: 0;
     padding: 0;
-    width: 100%;
+width: 100%;
 }
+
   #links a:hover span {
     top: 46%;
   }
+
   header { text-transform: uppercase; color: white; font-family: "Old Standard TT", serif; padding: 40px; }
+  
+
+      @media screen and (max-width: 800px) {
+   #links a {
+width: 50%;
+display: block;
+}
+}
   
   @media screen and (max-width: 480px) {
    #links a {
      width: 100%;
      max-width: 100%;
      font-size: 30px;
+min-width: 100%;
   }
     
     p {
@@ -81,12 +89,7 @@ span {
   }
     
   }
-      @media screen and (max-width: 800px) {
-   #links a {
-width: 50%; 
-}
-}
-  </style>
+</style>
   <script
   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
   integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
